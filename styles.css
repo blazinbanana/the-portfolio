@@ -1,0 +1,141 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7; /* Light Grey */
+    color: #333; /* Dark Grey */
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+.hero {
+    background: url('assets/hero-image.jpeg') center/cover no-repeat;
+    height: 100vh; /* Adjusted height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    color: #fff; /* White */
+    overflow: hidden; /* Prevent content overflow */
+}
+
+.hero-content {
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Navigation Styles */
+.navbar {
+    background-color: #333; /* Dark Grey */
+    padding: 20px 0;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    color: #fff; /* White */
+}
+
+.navbar-nav .nav-link {
+    color: #ccc; /* Light Grey */
+    font-size: 1.2rem;
+    margin-right: 20px;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #fff; /* White */
+}
+
+/* Section Styles */
+section {
+    padding: 50px 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+section.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.section-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.section-content img {
+    margin-top: 20px;
+    max-width: 100%;
+    transition: filter 0.5s ease-in-out;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333; /* Dark Grey */
+    color: #fff; /* White */
+    padding: 50px 0;
+}
+
+/* Carousel Styles */
+.carousel-item {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    filter: invert(100%);
+}
+
+/* Project Styles */
+.project h3 {
+    color: #333; /* Dark Grey */
+}
+
+.project p {
+    font-size: 1.2rem;
+}
+
+/* Hobbies Section Styles */
+#hobbies .row img {
+    margin-top: 20px;
+    max-width: 100%;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease-in-out;
+}
+
+#hobbies .row img:hover {
+    filter: grayscale(0%);
+}
+
+/* Hover Effects */
+a.btn, .navbar-nav .nav-link {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+a.btn:hover, .navbar-nav .nav-link:hover {
+    transform: scale(1.05);
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
